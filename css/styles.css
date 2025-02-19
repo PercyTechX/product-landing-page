@@ -1,70 +1,144 @@
-*{
-    box-sizing:  border-box;
-    margin:0;
-    padding: 0;
-}
-
-ul,
-ol{
-    list-style: none;
-}
-
-img{
-    max-width: 100%;
-    height: auto;
-    display: block;
+/* Variables y estilos generales */
+* {
+    --primary-color: #E67E22;
+    --dark-color: #0D253F;
+    --light-color: #FFFFFF;
 }
 
 body {
-
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: rgb(219, 213, 213);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-
-
+/* Encabezado */
 header nav {
-display: flex;
-align-items: center;
-padding: 20px;
-justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--dark-color);
+    padding: 15px 20px;
+}
+
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+nav a {
+    color: var(--light-color);
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.btn-whatsapp {
+    background: var(--primary-color);
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+
+/*-----------------------*/
+
+
+/* Sección Hero */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
 
 }
 
-header > nav > ul{
+.hero img {
+    max-width: 100%;
+    height: 80%;   
+}
+
+#ico01{
+    width: 280px;
+    /* Ajusta el tamaño */
+    text-align: center;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: #E17726;
+    /* Color de fondo */
+    color: white;
+    font-weight: bold;
+}
+
+#ico02 {
+    width: 280px;
+    /* Ajusta el tamaño */
+    text-align: center;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: #0D253F;
+    /* Color de fondo */
+    color: white;
+    font-weight: bold;
+}
+
+.text-overlay {
+    position: absolute; /* Posiciona el texto sobre la imagen */
+    top: 140%; /* Centra verticalmente */
+    left: 50%; /* Centra horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta el centrado */
+    color: rgb(255, 255, 255); /* Color del texto */
+    font-size: 24px; /* Tamaño del texto */
+    font-weight: bold; /* Grosor del texto */
+    text-align: center; /* Alineación del texto */
+    background-color: #0d253f81; /* Fondo semitransparente para mejor legibilidad */
+    padding: 10px; /* Espacio interno */
+    border-radius: 5px; /* Bordes redondeados */
+}
+#title {
+    color: #E17726;
+}
+
+
+
+/* Sección de Servicios */
+.services {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px;
+}
+
+.card {
+    width: 250px;
+    text-align: center;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.imagenredonda img {
+    width: 300px;
+    position: absolute; /* Posiciona el texto sobre la imagen */
+    top: 155%; /* Centra verticalmente */
+    left: 50%; /* Centra horizontalmente */
+    transform: translate(-180%, -20%); /* Ajusta el centrado */
+}
+
+.services {
     display: flex;
     gap: 20px;
 }
 
- #hero{
-    text-align: center;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
- }
 
-#hero h1 {
-    font-size: 32px;
+
+/*--------------------------------------------------*/
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: var(--dark-color);
+    color: var(--light-color);
 }
-
- #hero div {
-    text-align: center;
- }
-
- #features {
-    display: flex;
-    justify-content: center;
-    padding: 30px;
-    gap: 30px;
- }
-
- #features > div {
-display: flex;
-flex-direction: column;
-align-items: center;
-gap: 15px;
- }
-
- #features > div > p {
-    text-align: center;
- }
