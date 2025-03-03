@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Testimonios</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #E67E22;
+            --dark-color: #0D253F;
+            --light-color: #FFFFFF;
+        }
+
+        body {
+            font-family: "Nunito", Arial, sans-serif;
+            height: 100vh;
+        }
+
+        .testimonio {
+            background: var(--dark-color);
+            padding: 20px;
+            text-align: center;
+            border-radius: 5px;
+            color: var(--light-color);
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .testimonio:hover {
+            background-color: var(--primary-color);
+        }
+
+        .img-testimonio {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body class="bg-light">
+    <header class="bg-dark text-white py-3">
+        <nav class="container d-flex justify-content-between align-items-center">
+            <a href="./index.html">
+                <img src="./img/logo-blanco.png" alt="Logo de la empresa" width="100">
+            </a>
+            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                ☰
+            </button>
+            <ul class="nav d-none d-lg-flex">
+                <li class="nav-item"><a class="nav-link text-white" href="./index.html">INICIO</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="./compra.html">COMPRA</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="#">SERVICIOS</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="#">PROYECTOS</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="./testimonios-bootstrap.html">TESTIMONIO</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container mt-4">
+        <div class="row">
+            <aside class="col-md-3 bg-white p-3 rounded shadow-sm">
+                <h4>Filtro de calificaciones</h4>
+                <ul class="list-unstyled">
+                    <li><input type="checkbox"> 1 estrella</li>
+                    <li><input type="checkbox"> 2 estrellas</li>
+                    <li><input type="checkbox"> 3 estrellas</li>
+                    <li><input type="checkbox"> 4 estrellas</li>
+                    <li><input type="checkbox"> 5 estrellas</li>
+                </ul>
+            </aside>
+            <main class="col-md-9 d-grid gap-3" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
+                <div class="testimonio p-3">
+                    <img class="img-testimonio" src="./img/testimonio (1).jpg" alt="Testimonio">
+                    <h4>Jesus Nazario</h4>
+                    <p>GDS INFRAESTRUCTURA nos ayudó desde el proyecto hasta la implementación. ⭐⭐⭐⭐⭐</p>
+                </div>
+                <div class="testimonio p-3">
+                    <img class="img-testimonio" src="./img/testimonio (2).jpg" alt="Testimonio">
+                    <h4>Jesus Nazario</h4>
+                    <p>GDS INFRAESTRUCTURA nos ayudó desde el proyecto hasta la implementación. ⭐⭐⭐⭐</p>
+                </div>
+                <div class="testimonio p-3">
+                    <img class="img-testimonio" src="./img/testimonio (3).jpg" alt="Testimonio">
+                    <h4>Jesus Nazario</h4>
+                    <p>GDS INFRAESTRUCTURA nos ayudó desde el proyecto hasta la implementación. ⭐⭐⭐⭐⭐⭐</p>
+                </div>
+                <div class="testimonio p-3">
+                    <img class="img-testimonio" src="./img/testimonio (4).jpg" alt="Testimonio">
+                    <h4>Jesus Nazario</h4>
+                    <p>GDS INFRAESTRUCTURA nos ayudó desde el proyecto hasta la implementación. ⭐⭐⭐</p>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
