@@ -5,75 +5,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GDS Infraestructura</title>
-    <link rel="stylesheet" href="./css/styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body>
-    <header>
-        <nav aria-label="Menu de navegación">
-            <input type="checkbox" id="menu-toggle">
-            <label for="menu-toggle" class="menu-icon">☰</label>
+<body class="font-nunito m-0 p-0 box-border">
+    <header class="bg-[#0D253F] p-4 flex justify-between items-center">
+        <nav class="w-full flex justify-between items-center">
+            <input type="checkbox" id="menu-toggle" class="hidden">
+            <label for="menu-toggle" class="text-white text-2xl cursor-pointer md:hidden">☰</label>
             <div class="logo">
                 <a href="./index.html">
                     <img src="./img/logo-blanco.png" alt="Logo de la empresa" width="100">
                 </a>
             </div>
-
-            <ul class="nav-links">
-                <li><a href="./index.html">INICIO</a></li>
-                <li><a href="./compra.html">COMPRA</a></li>
-                <li><a href="#">SERVICIOS</a></li>
-                <li><a href="#">PROYECTOS</a></li>
-                <li><a href="./testimonio-bootstrap.html">TESTIMONIO</a></li>
+            <ul class="hidden md:flex gap-4 text-white">
+                <li><a href="./index.html" class="hover:text-gray-300">INICIO</a></li>
+                <li><a href="./compra.html" class="hover:text-gray-300">COMPRA</a></li>
+                <li><a href="#" class="hover:text-gray-300">SERVICIOS</a></li>
+                <li><a href="#" class="hover:text-gray-300">PROYECTOS</a></li>
+                <li><a href="./testimonio-bootstrap.html" class="hover:text-gray-300">TESTIMONIO</a></li>
             </ul>
         </nav>
     </header>
+
     <main>
-        <section class="hero">
-            <img src="./img/tinkagds-scaled.jpg" alt="Trabajadores de GDS Infraestructura">
-            <div class="text-overlay">
-                <h1 id="title">GDS INFRAESTRUCTURA</h1>
-                <p id="description">Diseñamos y elaboramos proyectos de ingeniera para edificaciones</p>
+        <section class="relative h-[500px] overflow-hidden">
+            <img src="./img/tinkagds-scaled.jpg" alt="Trabajadores de GDS Infraestructura" class="w-full h-full object-cover object-center">
+            <div class="absolute top-[65%] left-1/2 transform -translate-x-1/2 bg-[#0D253F]/50 text-white text-center p-3 rounded">
+                <h1 class="text-xl font-bold">GDS INFRAESTRUCTURA</h1>
+                <p class="text-lg">Diseñamos y elaboramos proyectos de ingeniería para edificaciones</p>
             </div>
         </section>
-        <article class="container">
-            <section class="services">
-                <div class="card bg-orange animacion">
-                    <img src="./img/ic-cont-1.png" alt="icono ingeniero con un construcción">
-                    <h3>Trabajos de Construcción</h3>
-                    <p>Realizamos una gran cantidad de servicios de construcción para cada necesidad.</p>
-                </div>
-                <div class="card bg-blue animacion">
-                    <img src="./img/ic-cont2.png" alt="icono de edificio">
-                    <h3>Acabados de Construcción</h3>
-                    <p>Brindamos servicios de acabados, revestimientos o recubrimientos con función estética y
-                        funcional.</p>
-                </div>
-            </section>
-        </article>
-        <article class="about">
-        
-                <section class="about-me">
-                    <h2 id="title-02">
-                        SOBRE NOSOTROS
-                    </h2>
 
-                    <h3 id="experience">MÁS DE <span class="resaltar">10 AÑOS DE EXPERIENCIA</span> OBTENIDA</h3>
-                    
-                        Somos una empresa con un equipo multidisciplinario de profesionales
-                        con amplia experiencia para lograr la excelencia en la gestión de la
-                        construcción y apoyar a nuestros clientes en sus desafíos y necesidades.</p>
-                </section>
-           
-            <div class="about-image-container">
-                <img id="img-trabajador-proyecto" src="./img/dise2.png" alt="trabajador y proyectos terminado">
+        <article class="flex flex-wrap justify-center gap-10 p-10">
+            <div class="w-72 text-white font-bold text-center p-4 border rounded-lg shadow-md bg-[#E67E22] hover:bg-[#f88827]">
+                <img src="./img/ic-cont-1.png" alt="icono ingeniero con un construcción">
+                <h3>Trabajos de Construcción</h3>
+                <p>Realizamos una gran cantidad de servicios de construcción para cada necesidad.</p>
+            </div>
+            <div class="w-72 text-white font-bold text-center p-4 border rounded-lg shadow-md bg-[#0D253F] hover:bg-[#102e4e]">
+                <img src="./img/ic-cont2.png" alt="icono de edificio">
+                <h3>Acabados de Construcción</h3>
+                <p>Brindamos servicios de acabados, revestimientos o recubrimientos con función estética y funcional.</p>
             </div>
         </article>
 
+        <article class="flex flex-wrap items-center justify-between gap-6 max-w-5xl mx-auto p-6">
+            <section class="text-[#0D253F] text-xl w-full md:w-1/2">
+                <h2 class="text-[#E67E22] font-bold">SOBRE NOSOTROS</h2>
+                <h3 class="text-2xl font-bold">MÁS DE <span class="text-[#E67E22]">10 AÑOS DE EXPERIENCIA</span> OBTENIDA</h3>
+                <p>Somos una empresa con un equipo multidisciplinario de profesionales con amplia experiencia para lograr la excelencia en la gestión de la construcción y apoyar a nuestros clientes en sus desafíos y necesidades.</p>
+            </section>
+            <div class="w-full md:w-1/2 flex justify-center">
+                <img src="./img/dise2.png" alt="trabajador y proyectos terminado" class="w-full h-auto object-cover">
+            </div>
+        </article>
     </main>
-    <footer class="bg-blue">
+
+    <footer class="bg-[#0D253F] text-center text-white p-4">
         <p>&copy; 2025 GDS Infraestructura. Todos los derechos reservados.</p>
     </footer>
 </body>
-
 </html>
