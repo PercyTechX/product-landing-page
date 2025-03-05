@@ -19,51 +19,155 @@
                 </a>
             </div>
             <ul class="hidden md:flex gap-4 text-white">
-                <li><a href="./index.html" class="hover:text-gray-300">INICIO</a></li>
-                <li><a href="./compra.html" class="hover:text-gray-300">COMPRA</a></li>
-                <li><a href="#" class="hover:text-gray-300">SERVICIOS</a></li>
-                <li><a href="#" class="hover:text-gray-300">PROYECTOS</a></li>
-                <li><a href="./testimonio-bootstrap.html" class="hover:text-gray-300">TESTIMONIO</a></li>
+                <li><a href="./index.html" class="hover:text-amber-400">INICIO</a></li>
+                <li><a href="./compra.html" class="hover:hover:text-amber-400">COMPRA</a></li>
+                <li><a href="#" class="hover:hover:text-amber-400">SERVICIOS</a></li>
+                <li><a href="#" class="hover:hover:text-amber-400">PROYECTOS</a></li>
+                <li><a href="./testimonio-bootstrap.html" class="hover:hover:text-amber-400">TESTIMONIO</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
         <section class="relative h-[500px] overflow-hidden">
-            <img src="./img/tinkagds-scaled.jpg" alt="Trabajadores de GDS Infraestructura" class="w-full h-full object-cover object-center">
-            <div class="absolute top-[65%] left-1/2 transform -translate-x-1/2 bg-[#0D253F]/50 text-white text-center p-3 rounded">
+            <img src="./img/tinkagds-scaled.jpg" alt="Trabajadores de GDS Infraestructura"
+                class="w-full h-full object-cover object-center">
+
+            <!-- info             -->
+            <div
+                class="absolute top-[65%] left-1/2 transform -translate-x-1/2 bg-[#0D253F]/50 text-white text-center p-3 rounded">
                 <h1 class="text-xl font-bold">GDS INFRAESTRUCTURA</h1>
                 <p class="text-lg">Diseñamos y elaboramos proyectos de ingeniería para edificaciones</p>
             </div>
         </section>
 
-        <article class="flex flex-wrap justify-center gap-10 p-10">
-            <div class="w-72 text-white font-bold text-center p-4 border rounded-lg shadow-md bg-[#E67E22] hover:bg-[#f88827]">
-                <img src="./img/ic-cont-1.png" alt="icono ingeniero con un construcción">
-                <h3>Trabajos de Construcción</h3>
-                <p>Realizamos una gran cantidad de servicios de construcción para cada necesidad.</p>
-            </div>
-            <div class="w-72 text-white font-bold text-center p-4 border rounded-lg shadow-md bg-[#0D253F] hover:bg-[#102e4e]">
-                <img src="./img/ic-cont2.png" alt="icono de edificio">
-                <h3>Acabados de Construcción</h3>
-                <p>Brindamos servicios de acabados, revestimientos o recubrimientos con función estética y funcional.</p>
-            </div>
-        </article>
 
-        <article class="flex flex-wrap items-center justify-between gap-6 max-w-5xl mx-auto p-6">
-            <section class="text-[#0D253F] text-xl w-full md:w-1/2">
-                <h2 class="text-[#E67E22] font-bold">SOBRE NOSOTROS</h2>
-                <h3 class="text-2xl font-bold">MÁS DE <span class="text-[#E67E22]">10 AÑOS DE EXPERIENCIA</span> OBTENIDA</h3>
-                <p>Somos una empresa con un equipo multidisciplinario de profesionales con amplia experiencia para lograr la excelencia en la gestión de la construcción y apoyar a nuestros clientes en sus desafíos y necesidades.</p>
-            </section>
-            <div class="w-full md:w-1/2 flex justify-center">
-                <img src="./img/dise2.png" alt="trabajador y proyectos terminado" class="w-full h-auto object-cover">
-            </div>
-        </article>
+        <section>
+            <article class="flex flex-wrap justify-center gap-10 p-10">
+                <div
+                    class="w-72 text-white font-bold text-center p-4 border rounded-lg shadow-md bg-[#E67E22] hover:bg-[#f88827]">
+                    <img src="./img/ic-cont-1.png" alt="icono ingeniero con un construcción">
+                    <h3>Trabajos de Construcción</h3>
+                    <p>Realizamos una gran cantidad de servicios de construcción para cada necesidad.</p>
+                </div>
+                <div
+                    class="w-72 text-white font-bold text-center p-4 border rounded-lg shadow-md bg-[#0D253F] hover:bg-[#102e4e]">
+                    <img src="./img/ic-cont2.png" alt="icono de edificio">
+                    <h3>Acabados de Construcción</h3>
+                    <p>Brindamos servicios de acabados, revestimientos o recubrimientos con función estética y
+                        funcional.</p>
+                </div>
+            </article>
+
+            <article class="flex flex-wrap md:flex-nowrap items-center gap-6 max-w-5xl mx-auto p-6">
+                <section class="text-[#0D253F] text-xl w-full md:w-1/2 min-h-[300px] flex flex-col justify-center">
+                    <h2 class="text-2xl text-[#E67E22] font-bold">SOBRE NOSOTROS</h2>
+                    <h3 class="text-2xl font-bold"><span class="text-[#0D253F]">MÁS DE</span> <span
+                            class="text-[#E67E22]">10 AÑOS DE EXPERIENCIA</span> <span
+                            class="text-[#0D253F]">OBTENIDA</span></h3>
+                    <p><span class="text-[#0D253F] text-base">Somos una empresa con un equipo multidisciplinario de
+                            profesionales
+                            con amplia experiencia para lograr la excelencia en la gestión de la construcción y apoyar a
+                            nuestros clientes en sus desafíos y necesidades.</span></p>
+                </section>
+                <div class="w-full md:w-1/2 flex justify-center min-h-[300px] items-center">
+                    <img src="./img/dise2.png" alt="trabajador y proyectos terminado"
+                        class="w-full h-auto max-h-[400px] object-cover">
+                </div>
+            </article>
+        </section>
     </main>
-
+    <!-- 
     <footer class="bg-[#0D253F] text-center text-white p-4">
         <p>&copy; 2025 GDS Infraestructura. Todos los derechos reservados.</p>
+    </footer> -->
+
+    <footer class="relative bg-[url('./img/fondo-2.jpg')] bg-cover bg-center bg-no-repeat text-white py-10">
+        <!-- Capa de fondo oscuro con transparencia -->
+        <div class="absolute inset-0 bg-[#0D253F] bg-opacity-30"></div>
+
+        <!-- Contenido del footer -->
+        <div class="relative container mx-auto px-6 grid md:grid-cols-3 gap-8 text-center md:text-left">
+
+            <div>
+                <h3 class="text-lg font-bold mb-4 flex items-center gap-2  ml-8">Más Información</h3>
+
+                <!-- Teléfonos -->
+                <div class="flex items-center gap-2 ml-8">
+                    <img src="./img/tel2.png" alt="Teléfono" class="w-6 h-6">
+                    <p>Oficina Principal</p>
+                </div>
+                <p class="flex items-center gap-2 ml-10">956 265 252</p>
+                <p class="flex items-center gap-2 ml-10">949 859 858</p>
+
+                <!-- Correo -->
+                <div class="flex items-center gap-2 mt-4 ml-8">
+                    <img src="./img/tel3.png" alt="Correo" class="w-6 h-6">
+                    <p>Escríbenos</p>
+                </div>
+                <p class="flex items-center gap-2 ml-10">ventas@gds.pe</p>
+                <p class="flex items-center gap-2 ml-10">mserrano@gds.pe</p>
+
+                <!-- Ubicación -->
+                <div class="flex items-center gap-2 mt-4 ml-8">
+                    <img src="./img/tel1.png" alt="Ubicación" class="w-6 h-6">
+                    <p class="text-[#E67E22] font-bold">Ubicación</p>
+                </div>
+                <p class="flex items-center gap-2 ml-10">San Martín de Porres - Lima, Perú</p>
+                <p class="flex items-center gap-2 ml-10">Chuquibambilla - Grau - Apurímac</p>
+            </div>
+
+            <!-- Sección: Enlaces de Interés -->
+            <div>
+                <h3 class="text-lg font-bold mb-4 flex items-center gap-2  ml-8">Enlaces de interés</h3>
+                <ul class="space-y-2">
+                    <li><a class="flex items-center gap-2 ml-10 hover:bg-[#E67E22]" href="#">INICIO</a></li>
+                    <li><a class="flex items-center gap-2 ml-10 hover:bg-[#E67E22]" href="#">NOSOTROS</a></li>
+                    <li><a class="flex items-center gap-2 ml-10 hover:bg-[#E67E22]" href="#">SERVICIOS</a></li>
+                    <li><a class="flex items-center gap-2 ml-10 hover:bg-[#E67E22]" href="#">EMPRESAS</a></li>
+                    <li><a class="flex items-center gap-2 ml-10 hover:bg-[#E67E22]" href="#">PROYECTOS</a></li>
+                    <li><a class="flex items-center gap-2 ml-10 hover:bg-[#E67E22]" href="#">CONTACTOS</a></li>
+                </ul>
+            </div>
+
+            <!-- Sección: Ubicación con Mapas -->
+            <div>
+                <h3 class="text-lg font-bold mb-4">Ubícanos</h3>
+                <div class="space-y-4">
+                    <!-- <iframe class="w-full h-40 rounded-md" src="https://www.google.com/maps/embed?..." allowfullscreen></iframe> -->
+                    <iframe class="w-full h-40 rounded-md"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3902.9748184921755!2d-77.10618012402927!3d-11.976244240593557!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105cde01238640d%3A0xbba686257c894032!2sGDS%20Infraestructura!5e0!3m2!1ses!2spe!4v1741188890622!5m2!1ses!2spe"
+                        width="600" height="450" style="border:0;" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe class="w-full h-40 rounded-md"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d123825.54450670395!2d-72.92524501348106!3d-14.103823366230442!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x916c8bc564368183%3A0x4aea91927bb53c9a!2sChuquibambilla%2C%2003310!5e0!3m2!1ses!2spe!4v1741189039539!5m2!1ses!2spe"
+                        width="600" height="450" style="border:0;" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+
+        <!-- Línea final -->
+        <div class="relative text-center mt-8 border-t border-gray-600 pt-4">
+            <p class="text-sm">© 2025 GDS | Todos los Derechos Reservados | PercyTech</p>
+        </div>
     </footer>
+
+
+    <div class="fixed right-5 bottom-5 z-50 flex flex-col items-center">
+        <a href="https://api.whatsapp.com/send?phone=51966804286&text=Hola%20GDS%20INFRAESTRUCTURA%2C%20vengo%20de%20la%20web%20y%20quiero%20comunicarme%20con%20usted.
+        " target="_blank" rel="noopener noreferrer">
+            <img src="./img/ic-what.png" alt="WhatsApp"
+                class="w-14 h-14 rounded-full shadow-lg hover:scale-110 transition-transform duration-200">
+        </a>
+        <div class="mt-2 bg-green-500 text-white py-1 px-3 rounded-md text-xs font-semibold">
+            <a href="https://api.whatsapp.com/send?phone=51966804286&text=Hola%20GDS%20INFRAESTRUCTURA%2C%20vengo%20de%20la%20web%20y%20quiero%20comunicarme%20con%20usted.
+            ">Consúltenos</a>
+        </div>
+    </div>
+
+
+
 </body>
+
 </html>

@@ -1,69 +1,239 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página de Compra</title>
-    <link rel="stylesheet" href="./css/styles-compra.css">
+    <meta charset="UTF-8"> <!-- Define la codificación de caracteres -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configuración para diseño responsive -->
+    <title>GDS Infraestructura</title> <!-- Título de la página que aparece en la pestaña del navegador -->
+    <script src="https://cdn.tailwindcss.com"></script> <!-- Importa Tailwind CSS desde CDN para estilos -->
 </head>
-<body>
-    <header>
-        <nav aria-label="Menu de navegación">
-            <input type="checkbox" id="menu-toggle">
-            <label for="menu-toggle" class="menu-icon">☰</label>
-            <div class="logo">
-                <a href="./index.html">
-                    <img src="./img/logo-blanco.png" alt="Logo de la empresa" width="100">
+
+<body class="font-nunito m-0 p-0 box-border"> <!-- Aplica fuente Nunito y reset de márgenes/padding al cuerpo -->
+    <!-- HEADER: Barra de navegación principal -->
+    <header class="bg-[#0D253F] p-4 flex justify-between items-center">
+        <!-- Encabezado con fondo azul oscuro y padding -->
+        <nav class="w-full flex justify-between items-center"> <!-- Barra de navegación flexible que ocupa todo el ancho -->
+            <input type="checkbox" id="menu-toggle" class="hidden"> <!-- Checkbox oculto para control del menú móvil -->
+            <label for="menu-toggle" class="text-white text-2xl cursor-pointer md:hidden">☰</label>
+            <!-- Ícono de menú hamburguesa visible solo en móviles -->
+            <div class="logo"> <!-- Contenedor del logo -->
+                <a href="./index.html"> <!-- Enlace a la página principal -->
+                    <img src="./img/logo-blanco.png" alt="Logo de la empresa" width="100"> <!-- Logo blanco de la empresa -->
                 </a>
             </div>
-
-            <ul class="nav-links">
-                <li><a href="./index.html">INICIO</a></li>
-                <li><a href="./compra.html">COMPRA</a></li>
-                <li><a href="#">SERVICIOS</a></li>
-                <li><a href="#">PROYECTOS</a></li>
-                <li><a href="./testimonio-bootstrap.html">TESTIMONIO</a></li>
+            <ul class="hidden md:flex gap-4 text-white"> <!-- Lista de enlaces de navegación oculta en móviles, visible en pantallas medianas -->
+                <li><a href="./index.html" class="hover:text-amber-400">INICIO</a></li>
+                <!-- Enlace a la página de inicio con efecto hover ámbar -->
+                <li><a href="./compra.html" class="hover:hover:text-amber-400">COMPRA</a></li>
+                <!-- Enlace a la página actual de compra -->
+                <li><a href="#" class="hover:hover:text-amber-400">SERVICIOS</a></li>
+                <!-- Enlace a la página de servicios -->
+                <li><a href="#" class="hover:hover:text-amber-400">PROYECTOS</a></li>
+                <!-- Enlace a la página de proyectos -->
+                <li><a href="./testimonio-bootstrap.html" class="hover:hover:text-amber-400">TESTIMONIO</a></li>
+                <!-- Enlace a la página de testimonios -->
             </ul>
         </nav>
     </header>
 
-    
-    <div class="container">
-        <!-- Sidebar -->
-        <aside class="sidebar">
-            <ul>
-                <li>🛒 Selección de variantes</li>
-                <li>🚚 Cálculo de envío</li>
-                <li>💳 Métodos de pago</li>
-            </ul>
+    <!-- CONTENIDO PRINCIPAL: Layout de página de compra -->
+    <div class="container mx-auto py-8 grid grid-cols-1 md:grid-cols-4 gap-8">
+        <!-- Contenedor principal con grid responsivo: 1 columna en móvil, 4 columnas en desktop con espacio entre ellas -->
+        
+        <!-- SIDEBAR: Panel lateral de opciones de compra -->
+        <aside class="sidebar md:col-span-1">
+            <!-- Barra lateral que ocupa 1 columna del grid en pantallas medianas -->
+            <div class="max-w-md mx-auto p-6 bg-white rounded-lg shadow-md">
+                <!-- Contenedor con ancho máximo, centrado, con padding, fondo blanco y sombra -->
+                <h2 class="text-2xl font-semibold text-[#0D253F] mb-6">Opciones de Compra</h2>
+                <!-- Título de la sección de opciones en color azul corporativo -->
+                <div class="space-y-2"> <!-- Contenedor con espaciado vertical entre los elementos -->
+                    <!-- Opción 1: Diseños de planos -->
+                    <label class="flex items-center space-x-2 cursor-pointer">
+                        <!-- Etiqueta como contenedor flexible con cursor tipo pointer -->
+                        <input type="checkbox" class="form-checkbox text-primary rounded" value="5">
+                        <!-- Checkbox para selección con valor 5 -->
+                        <span class="transform motion-safe:hover:scale-110">Diseños de planos</span>
+                        <!-- Texto con efecto de escala al hover -->
+                    </label>
+                    
+                    <!-- Opción 2: Remodelaciones -->
+                    <label class="flex items-center space-x-2 cursor-pointer">
+                        <input type="checkbox" class="form-checkbox text-primary rounded" value="4">
+                        <span class="transform motion-safe:hover:scale-110">Remodelaciones</span>
+                    </label>
+                    
+                    <!-- Opción 3: Construcción -->
+                    <label class="flex items-center space-x-2 cursor-pointer">
+                        <input type="checkbox" class="form-checkbox text-primary rounded" value="4">
+                        <span class="transform motion-safe:hover:scale-110">Construcción</span>
+                    </label>
+                    
+                    <!-- Botón de compra -->
+                    <button class="w-full bg-[#E67E22] hover:bg-[#0D253F] text-white font-semibold py-2 px-4 rounded">
+                        Comprar
+                        <!-- Botón naranja que cambia a azul al hover, con texto blanco -->
+                    </button>
+                </div>
+            </div>
         </aside>
 
-        <!-- Contenido Principal -->
-        <main class="main-content">
-            <div class="services-card">
-                <h2>Diseños de planos</h2>
-                <img src="./img/diseño-de-planos.jpg" alt="diseñando en autocad">
-                <p>Descripción breve del producto.</p>
-                <p class="price">Desde $99</p>
-                <button class="buy-btn">Comprar Ahora</button>
+        <!-- CONTENIDO PRINCIPAL: Tarjetas de servicios -->
+        <main class="main-content md:col-span-3 grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Contenido principal que ocupa 3 columnas en pantallas medianas y tiene grid interno -->
+            
+            <!-- Tarjeta 1: Diseños de planos -->
+            <div class="services-card bg-white rounded-lg shadow-md p-6">
+                <!-- Tarjeta con fondo blanco, bordes redondeados, sombra y padding -->
+                <h2 class="text-xl font-semibold text-[#0D253F] mb-4">Diseños de planos</h2>
+                <!-- Título del servicio en azul corporativo -->
+                <img src="./img/diseño-de-planos.jpg" alt="diseñando en autocad" class="w-full rounded-md mb-4">
+                <!-- Imagen que ocupa todo el ancho de la tarjeta con bordes redondeados -->
+                <p class="text-[#0D253F] mb-2">Descripción breve del producto.</p>
+                <!-- Descripción corta del servicio -->
+                <p class="price font-semibold text-[#0D253F] mb-4">Desde $99</p>
+                <!-- Precio del servicio en negrita -->
+                <button
+                    class="buy-btn bg-[#0D253F] hover:bg-[#E67E22] text-white font-semibold py-2 px-4 rounded-full w-full">Comprar
+                    Ahora</button>
+                <!-- Botón de compra azul que cambia a naranja al hover, con texto blanco y bordes redondeados -->
             </div>
-            <div class="services-card">
-                <h2>Remodelaciones</h2>
-                <img src="./img/remodelacion.jpg" alt="">
-                <p>Descripción breve del producto.</p>
-                <p class="price">Desde $999</p>
-                <button class="buy-btn">Comprar Ahora</button>
+            
+            <!-- Tarjeta 2: Remodelaciones -->
+            <div class="services-card bg-white rounded-lg shadow-md text-[#0D253F] p-6">
+                <h2 class="text-xl font-semibold text-[#0D253F] text-[#0D253F] mb-4">Remodelaciones</h2>
+                <!-- Título del servicio (nota: tiene color azul repetido) -->
+                <img src="./img/remodelacion.jpg" alt="" class="w-full rounded-md text-[#0D253F] mb-4">
+                <!-- Imagen de remodelación (nota: falta texto alternativo y tiene color de texto innecesario) -->
+                <p class="mb-2">Descripción breve del producto.</p>
+                <!-- Descripción corta del servicio -->
+                <p class="price font-semibold text-[#0D253F] mb-4">Desde $999</p>
+                <!-- Precio del servicio en negrita -->
+                <button
+                    class="buy-btn bg-[#0D253F] hover:bg-[#E67E22] text-white font-semibold py-2 px-4 rounded-full w-full">Comprar
+                    Ahora</button>
+                <!-- Botón de compra azul que cambia a naranja al hover, con texto blanco y bordes redondeados -->
             </div>
-        
-        <div class="services-card">
-            <h2>Construcción</h2>
-            <img src="./img/construccion.jpg" alt="">
-            <p>Descripción breve del producto.</p>
-            <p class="price">Desde $9999</p>
-            <button class="buy-btn">Comprar Ahora</button>
-        </div>
-    
+            
+            <!-- Tarjeta 3: Construcción -->
+            <div class="services-card bg-white rounded-lg shadow-md p-6">
+                <h2 class="text-xl font-semibold text-[#0D253F] mb-4">Construcción</h2>
+                <!-- Título del servicio -->
+                <img src="./img/construccion.jpg" alt="" class="w-full rounded-md mb-4">
+                <!-- Imagen de construcción (nota: falta texto alternativo) -->
+                <p class="text-[#0D253F] mb-2">Descripción breve del producto.</p>
+                <!-- Descripción corta del servicio -->
+                <p class="price font-semibold text-[#0D253F] mb-4">Desde $9999</p>
+                <!-- Precio del servicio en negrita -->
+                <button
+                    class="buy-btn bg-[#0D253F] hover:bg-[#E67E22] text-white font-semibold py-2 px-4 rounded-full w-full">Comprar
+                    Ahora</button>
+                <!-- Botón de compra azul que cambia a naranja al hover, con texto blanco y bordes redondeados -->
+            </div>
         </main>
     </div>
+
 </body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Footer -->
+    <footer class="relative bg-[url('./img/fondo-2.jpg')] bg-cover bg-center bg-no-repeat text-white py-10">
+        <!-- Fondo del footer con imagen -->
+        <!-- Capa de fondo oscuro con transparencia -->
+        <div class="absolute inset-0 bg-[#0D253F] bg-opacity-30"></div>
+        <!-- Capa oscura semitransparente sobre la imagen de fondo -->
+
+        <!-- Contenido del footer -->
+        <div class="relative container mx-auto px-6 grid md:grid-cols-3 gap-8 text-center md:text-left">
+            <!-- Grid para el contenido del footer -->
+
+            <!-- Sección: Información de contacto -->
+            <div>
+                <h3 class="text-lg font-bold mb-4 flex items-center gap-2  ml-8">Más Información</h3>
+                <!-- Título de la sección -->
+
+                <!-- Teléfonos -->
+                <div class="flex items-center gap-2 ml-8"> <!-- Contenedor para teléfonos -->
+                    <img src="./img/tel2.png" alt="Teléfono" class="w-6 h-6"> <!-- Ícono de teléfono -->
+                    <p>Oficina Principal</p> <!-- Texto descriptivo -->
+                </div>
+                <p class="flex items-center gap-2 ml-10">956 265 252</p> <!-- Número de teléfono -->
+                <p class="flex items-center gap-2 ml-10">949 859 858</p> <!-- Número de teléfono -->
+
+                <!-- Correo -->
+                <div class="flex items-center gap-2 mt-4 ml-8"> <!-- Contenedor para correos -->
+                    <img src="./img/tel3.png" alt="Correo" class="w-6 h-6"> <!-- Ícono de correo -->
+                    <p>Escríbenos</p> <!-- Texto descriptivo -->
+                </div>
+                <p class="flex items-center gap-2 ml-10">ventas@gds.pe</p> <!-- Correo electrónico -->
+                <p class="flex items-center gap-2 ml-10">mserrano@gds.pe</p> <!-- Correo electrónico -->
+
+                <!-- Ubicación -->
+                <div class="flex items-center gap-2 mt-4 ml-8"> <!-- Contenedor para ubicación -->
+                    <img src="./img/tel1.png" alt="Ubicación" class="w-6 h-6"> <!-- Ícono de ubicación -->
+                    <p class="text-[#E67E22] font-bold">Ubicación</p> <!-- Texto descriptivo -->
+                </div>
+                <p class="flex items-center gap-2 ml-10">San Martín de Porres - Lima, Perú</p> <!-- Dirección -->
+                <p class="flex items-center gap-2 ml-10">Chuquibambilla - Grau - Apurímac</p> <!-- Dirección -->
+            </div>
+
+            <!-- Sección: Enlaces de Interés -->
+            <div>
+                <h3 class="text-lg font-bold mb-4 flex items-center gap-2  ml-8">Enlaces de interés</h3>
+                <!-- Título de la sección -->
+                <ul class="space-y-2"> <!-- Lista de enlaces -->
+                    <li><a class="flex items-center gap-2 ml-10 hover:bg-[#E67E22]" href="#">INICIO</a></li>
+                    <li><a class="flex items-center gap-2 ml-10 hover:bg-[#E67E22]" href="#">NOSOTROS</a></li>
+                    <li><a class="flex items-center gap-2 ml-10 hover:bg-[#E67E22]" href="#">SERVICIOS</a></li>
+                    <li><a class="flex items-center gap-2 ml-10 hover:bg-[#E67E22]" href="#">EMPRESAS</a></li>
+                    <li><a class="flex items-center gap-2 ml-10 hover:bg-[#E67E22]" href="#">PROYECTOS</a></li>
+                    <li><a class="flex items-center gap-2 ml-10 hover:bg-[#E67E22]" href="#">CONTACTOS</a></li>
+
+                </ul>
+            </div>
+
+            <!-- Sección: Ubicación con Mapas -->
+            <div>
+                <h3 class="text-lg font-bold mb-4">Ubícanos</h3> <!-- Título de la sección -->
+                <div class="space-y-4"> <!-- Contenedor para mapas -->
+                    <!-- Mapa de Google Maps -->
+                    <iframe class="w-full h-40 rounded-md"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3902.9748184921755!2d-77.10618012402927!3d-11.976244240593557!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105cde01238640d%3A0xbba686257c894032!2sGDS%20Infraestructura!5e0!3m2!1ses!2spe!4v1741188890622!5m2!1ses!2spe"
+                        width="600" height="450" style="border:0;" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe> <!-- Mapa de la ubicación principal -->
+                    <iframe class="w-full h-40 rounded-md"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d123825.54450670395!2d-72.92524501348106!3d-14.103823366230442!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x916c8bc564368183%3A0x4aea91927bb53c9a!2sChuquibambilla%2C%2003310!5e0!3m2!1ses!2spe!4v1741189039539!5m2!1ses!2spe"
+                        width="600" height="450" style="border:0;" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe> <!-- Mapa de la ubicación secundaria -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Línea final -->
+        <div class="relative text-center mt-8 border-t border-gray-600 pt-4">
+            <!-- Línea divisoria y texto de derechos -->
+            <p class="text-sm">© 2025 GDS | Todos los Derechos Reservados | PercyTech</p>
+            <!-- Texto de derechos de autor -->
+        </div>
+    </footer>
+</body>
+
 </html>
