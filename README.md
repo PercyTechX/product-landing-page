@@ -7,7 +7,7 @@ Este proyecto consiste en la implementación del sitio web responsivo para GDS I
 
 ## Enlace al Sitio
 
-El sitio web se encuentra disponible en: [https://gds-infraestructura.com](https://gds-infraestructura.com)
+El sitio web se encuentra disponible en: https://percytechx.github.io/product-landing-page/
 
 ## Retos Adicionales Implementados
 
